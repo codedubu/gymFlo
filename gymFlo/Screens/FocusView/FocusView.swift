@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct FocusView: View {
+    
+    @AppStorage("FierceFiveWorkout") private var workout = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+        VStack {
+            Spacer()
+            TimerView()
+            TextEditor(text: $workout)
+                .padding()
+        }
     }
 }
 

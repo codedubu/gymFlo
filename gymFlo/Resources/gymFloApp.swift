@@ -11,7 +11,7 @@ import SwiftUI
 struct gymFloApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GYFTabBar()
         }
     }
 }

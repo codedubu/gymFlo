@@ -11,11 +11,15 @@
 		79811FDE2890FBB1007D972D /* RemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79811FDD2890FBB1007D972D /* RemoteView.swift */; };
 		79811FE02890FC0C007D972D /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79811FDF2890FC0C007D972D /* FocusView.swift */; };
 		79811FE22890FC15007D972D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79811FE12890FC15007D972D /* TimerView.swift */; };
+		79811FE52890FD13007D972D /* GYFTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79811FE42890FD13007D972D /* GYFTabBar.swift */; };
+		79811FE72890FDD1007D972D /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79811FE62890FDD1007D972D /* TimerViewModel.swift */; };
 		79C126B52890F680006CEC6E /* gymFloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C126B42890F680006CEC6E /* gymFloApp.swift */; };
 		79C126B92890F681006CEC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C126B82890F681006CEC6E /* Assets.xcassets */; };
 		79C126BC2890F681006CEC6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C126BB2890F681006CEC6E /* Preview Assets.xcassets */; };
 		79C126CA2890F86D006CEC6E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C126C92890F86D006CEC6E /* Constants.swift */; };
-		79C126CD2890F929006CEC6E /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C126CC2890F929006CEC6E /* SpotifyiOS.framework */; };
+		79C126D72891024E006CEC6E /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C126D62891024E006CEC6E /* Int+Ext.swift */; };
+		79C126D928910267006CEC6E /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C126D828910267006CEC6E /* Color+Ext.swift */; };
+		79C126DA28910337006CEC6E /* SpotifyiOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C126D3289101F6006CEC6E /* SpotifyiOS.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,8 @@
 		79811FDD2890FBB1007D972D /* RemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteView.swift; sourceTree = "<group>"; };
 		79811FDF2890FC0C007D972D /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		79811FE12890FC15007D972D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		79811FE42890FD13007D972D /* GYFTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYFTabBar.swift; sourceTree = "<group>"; };
+		79811FE62890FDD1007D972D /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		79C126B12890F680006CEC6E /* gymFlo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gymFlo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C126B42890F680006CEC6E /* gymFloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gymFloApp.swift; sourceTree = "<group>"; };
 		79C126B82890F681006CEC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,7 +36,9 @@
 		79C126C52890F75B006CEC6E /* gymFlo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gymFlo-Bridging-Header.h"; sourceTree = "<group>"; };
 		79C126C82890F7D8006CEC6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C126C92890F86D006CEC6E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		79C126CC2890F929006CEC6E /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		79C126D3289101F6006CEC6E /* SpotifyiOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SpotifyiOS.xcframework; sourceTree = "<group>"; };
+		79C126D62891024E006CEC6E /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
+		79C126D828910267006CEC6E /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79C126CD2890F929006CEC6E /* SpotifyiOS.framework in Frameworks */,
+				79C126DA28910337006CEC6E /* SpotifyiOS.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +56,7 @@
 		79811FD62890FB5E007D972D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				79811FE42890FD13007D972D /* GYFTabBar.swift */,
 				79811FD72890FB63007D972D /* FocusView */,
 				79811FDA2890FB88007D972D /* TimerView */,
 				79811FD82890FB6B007D972D /* RemoteView */,
@@ -83,6 +92,7 @@
 		79811FDA2890FB88007D972D /* TimerView */ = {
 			isa = PBXGroup;
 			children = (
+				79811FE62890FDD1007D972D /* TimerViewModel.swift */,
 				79811FE12890FC15007D972D /* TimerView.swift */,
 			);
 			path = TimerView;
@@ -137,7 +147,7 @@
 		79C126CB2890F89D006CEC6E /* Spotify */ = {
 			isa = PBXGroup;
 			children = (
-				79C126CC2890F929006CEC6E /* SpotifyiOS.framework */,
+				79C126D3289101F6006CEC6E /* SpotifyiOS.xcframework */,
 				79C126C52890F75B006CEC6E /* gymFlo-Bridging-Header.h */,
 			);
 			path = Spotify;
@@ -146,6 +156,7 @@
 		79C126CE2890FA51006CEC6E /* Helpers and Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				79C126D528910246006CEC6E /* Extension */,
 				79C126CF2890FA5C006CEC6E /* Helpers */,
 			);
 			path = "Helpers and Extensions";
@@ -157,6 +168,15 @@
 				79C126C92890F86D006CEC6E /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		79C126D528910246006CEC6E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				79C126D62891024E006CEC6E /* Int+Ext.swift */,
+				79C126D828910267006CEC6E /* Color+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +254,12 @@
 				79811FDC2890FBA5007D972D /* SettingsView.swift in Sources */,
 				79C126B52890F680006CEC6E /* gymFloApp.swift in Sources */,
 				79811FDE2890FBB1007D972D /* RemoteView.swift in Sources */,
+				79811FE72890FDD1007D972D /* TimerViewModel.swift in Sources */,
+				79C126D72891024E006CEC6E /* Int+Ext.swift in Sources */,
 				79C126CA2890F86D006CEC6E /* Constants.swift in Sources */,
 				79811FE02890FC0C007D972D /* FocusView.swift in Sources */,
+				79811FE52890FD13007D972D /* GYFTabBar.swift in Sources */,
+				79C126D928910267006CEC6E /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +302,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -338,6 +363,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -379,6 +405,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,6 +445,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
