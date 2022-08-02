@@ -23,7 +23,7 @@ struct GYFTabBar: View {
                     .tabItem { Label("Focus", systemImage: "eye.circle.fill") }
                     .tag(Tabs.focus)
                 
-                RemoteView()
+                SpotifyRemoteView()
                     .tabItem { Label("Remote", systemImage: "appletvremote.gen1.fill") }
                     .tag(Tabs.remote)
                 

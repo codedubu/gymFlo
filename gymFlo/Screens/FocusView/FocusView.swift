@@ -15,7 +15,6 @@ struct FocusView: View {
     
         VStack {
             Spacer()
-            TimerView()
             TextEditor(text: $workout)
                 .padding()
         }

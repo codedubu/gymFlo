@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RemoteView: View {
+struct SpotifyRemoteView: View {
     
     var body: some View {
         
@@ -34,7 +34,7 @@ struct RemoteView: View {
 
 struct RemoteView_Previews: PreviewProvider {
     static var previews: some View {
-        RemoteView()
+        SpotifyRemoteView()
     }
 }
 
