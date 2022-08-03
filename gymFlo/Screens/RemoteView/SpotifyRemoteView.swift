@@ -9,25 +9,40 @@ import SwiftUI
 
 struct SpotifyRemoteView: View {
     
+    @EnvironmentObject private var viewModel: SpotifyRemoteViewModel
+    
     var body: some View {
         
-        VStack {
-            
-            Spacer()
-                        
-            Image("thewutang")
-                .frame(width: 350, height: 350, alignment: .center)
-            
-            Text("C.R.E.A.M (Cash Rules Everything Around Me)")
-                .font(.title3)
-            
-            HStack(spacing: 44) {
-                SystemIconView(name: "backward.fill")
-                SystemIconView(name: "play.fill")
-                SystemIconView(name: "forward.fill")
+        if viewModel.isConnectedToSpotify {
+            VStack {
+                
+                Image(uiImage: viewModel.albumImage)
+                    .resizable()
+                    .frame(width: 350, height: 350)
+                
+                Text(viewModel.trackName)
+                    .font(.title2)
+                
+                Button {
+                    viewModel.didTapPauseOrPlay()
+                } label: {
+                    Image(systemName: viewModel.isPaused ? "pause.circle.fill" : "play.circle.fill")
+                        .resizable()
+                        .frame(width: 44, height: 44)
+                }
+                .tint(.brandPrimary)
             }
-            
-            Spacer()
+        } else {
+            VStack {
+                Text("Connect to Spotify")
+                    .bold()
+                    .font(.title)
+                Button("Connect") {
+                    viewModel.didTapConnect()
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.brandPrimary)
+            }
         }
     }
 }
@@ -37,16 +52,3 @@ struct RemoteView_Previews: PreviewProvider {
         SpotifyRemoteView()
     }
 }
-
-struct SystemIconView: View {
-    
-    var name: String
-    
-    var body: some View {
-        Image(systemName: name)
-            .resizable()
-            .scaledToFit()
-            .frame(width: 52, height: 52)
-    }
-}
-

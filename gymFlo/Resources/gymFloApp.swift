@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct gymFloApp: App {
-    let spotify = SpotifyRemoteViewModel.shared
+    @StateObject private var spotify = SpotifyRemoteViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -18,6 +18,7 @@ struct gymFloApp: App {
                 .onOpenURL { url in
                     spotify.handleOpenURL(url)
                 }
+                
         }
     }
 }

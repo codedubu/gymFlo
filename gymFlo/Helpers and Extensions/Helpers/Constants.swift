@@ -5,7 +5,12 @@
 //  Created by River McCaine on 7/26/22.
 //
 
-import Foundation
+import UIKit
+
+enum PlaceholderImage {
+    
+    static let album = UIImage(named: "thewutang")!
+}
 
 let accessTokenKey           = "access-token-key"
 let redirectUri              = URL(string:"gymFlo://")!

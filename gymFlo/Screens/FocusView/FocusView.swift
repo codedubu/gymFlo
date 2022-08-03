@@ -12,12 +12,22 @@ struct FocusView: View {
     @AppStorage("FierceFiveWorkout") private var workout = ""
     
     var body: some View {
-    
-        VStack {
-            Spacer()
-            TextEditor(text: $workout)
-                .padding()
+        NavigationView {
+            VStack {
+                Spacer()
+                TextEditor(text: $workout)
+                    .padding()
+            }
+            .toolbar {
+                Button {
+                    dismissKeyboard()
+                } label: {
+                    Image(systemName: "keyboard.chevron.compact.down")
+                        .tint(.brandPrimary)
+                }
+            }
         }
+      
     }
 }
 

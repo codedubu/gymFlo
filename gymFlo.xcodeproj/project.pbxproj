@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79733439289A155600E44053 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79733438289A155600E44053 /* View+Ext.swift */; };
+		797F805C28998AAE003EF576 /* GYFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797F805B28998AAE003EF576 /* GYFError.swift */; };
+		797F805E28998B0F003EF576 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797F805D28998B0F003EF576 /* Alert.swift */; };
 		79811FDC2890FBA5007D972D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79811FDB2890FBA5007D972D /* SettingsView.swift */; };
 		79811FDE2890FBB1007D972D /* SpotifyRemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79811FDD2890FBB1007D972D /* SpotifyRemoteView.swift */; };
 		79811FE02890FC0C007D972D /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79811FDF2890FC0C007D972D /* FocusView.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		79733438289A155600E44053 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		797F805B28998AAE003EF576 /* GYFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYFError.swift; sourceTree = "<group>"; };
+		797F805D28998B0F003EF576 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		79811FDB2890FBA5007D972D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		79811FDD2890FBB1007D972D /* SpotifyRemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyRemoteView.swift; sourceTree = "<group>"; };
 		79811FDF2890FC0C007D972D /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
@@ -70,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		797F805A28998A98003EF576 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				797F805B28998AAE003EF576 /* GYFError.swift */,
+				797F805D28998B0F003EF576 /* Alert.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		79811FD62890FB5E007D972D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +198,7 @@
 		79C126CF2890FA5C006CEC6E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				797F805A28998A98003EF576 /* Utilities */,
 				79C126C92890F86D006CEC6E /* Constants.swift */,
 			);
 			path = Helpers;
@@ -193,6 +209,7 @@
 			children = (
 				79C126D62891024E006CEC6E /* Int+Ext.swift */,
 				79C126D828910267006CEC6E /* Color+Ext.swift */,
+				79733438289A155600E44053 /* View+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -269,10 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79733439289A155600E44053 /* View+Ext.swift in Sources */,
 				79811FE22890FC15007D972D /* TimerView.swift in Sources */,
+				797F805C28998AAE003EF576 /* GYFError.swift in Sources */,
 				79811FDC2890FBA5007D972D /* SettingsView.swift in Sources */,
 				79C126B52890F680006CEC6E /* gymFloApp.swift in Sources */,
 				79811FDE2890FBB1007D972D /* SpotifyRemoteView.swift in Sources */,
+				797F805E28998B0F003EF576 /* Alert.swift in Sources */,
 				79811FE72890FDD1007D972D /* TimerViewModel.swift in Sources */,
 				79DB135A28988DA6005C85A9 /* SpotifyRemoteViewModel.swift in Sources */,
 				79C126D72891024E006CEC6E /* Int+Ext.swift in Sources */,
