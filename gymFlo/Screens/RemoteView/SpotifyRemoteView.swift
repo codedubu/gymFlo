@@ -10,12 +10,12 @@ import SwiftUI
 struct SpotifyRemoteView: View {
     
     @EnvironmentObject private var viewModel: SpotifyRemoteViewModel
+    @State var scrollTText = false
     
     var body: some View {
         
         if viewModel.isConnectedToSpotify {
             VStack {
-                
                 Image(uiImage: viewModel.albumImage)
                     .resizable()
                     .frame(width: 350, height: 350)
@@ -23,14 +23,36 @@ struct SpotifyRemoteView: View {
                 Text(viewModel.trackName)
                     .font(.title2)
                 
-                Button {
-                    viewModel.didTapPauseOrPlay()
-                } label: {
-                    Image(systemName: viewModel.isPaused ? "pause.circle.fill" : "play.circle.fill")
-                        .resizable()
-                        .frame(width: 44, height: 44)
+                HStack(spacing: 24) {
+                    Button {
+                        viewModel.didTapNext()
+                    }label: {
+                        Image(systemName: "backward.fill")
+                            .resizable()
+                            .frame(width: 44, height: 44)
+                    }
+                    .tint(.brandPrimary)
+
+                    
+                    Button {
+                        viewModel.didTapPauseOrPlay()
+                    } label: {
+                        Image(systemName: viewModel.isPaused ? "pause.circle.fill" : "play.circle.fill")
+                            .resizable()
+                            .frame(width: 64, height: 64)
+                    }
+                    .tint(.brandPrimary)
+                    
+                    Button {
+                        viewModel.didTapNext()
+                    }label: {
+                        Image(systemName: "forward.fill")
+                            .resizable()
+                            .frame(width: 44, height: 44)
+                    }
+                    .tint(.brandPrimary)
+
                 }
-                .tint(.brandPrimary)
             }
         } else {
             VStack {

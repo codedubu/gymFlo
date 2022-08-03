@@ -189,6 +189,7 @@ final class SpotifyRemoteViewModel: NSObject, ObservableObject {
         } else {
             isPaused = true
         }
+        
     }
     
     
@@ -208,6 +209,7 @@ final class SpotifyRemoteViewModel: NSObject, ObservableObject {
         } else {
             appRemote.playerAPI?.pause(nil)
         }
+        
     }
     
     
@@ -221,6 +223,24 @@ final class SpotifyRemoteViewModel: NSObject, ObservableObject {
     func didTapConnect() {
         guard let sessionManager = sessionManager else { return }
         sessionManager.initiateSession(with: scopes, options: .clientOnly)
+    }
+    
+    
+    func didTapNext() {
+        appRemote.playerAPI?.skip(toNext: { thang, error in
+            if let error = error {
+                print("Error getting next song to update with player state:" + error.localizedDescription)
+            }
+        })
+    }
+    
+    func didTapPrevious() {
+        appRemote.playerAPI?.skip(toPrevious: { thang, error in
+            if let error = error {
+                print("Error getting previous song to update with player state:" + error.localizedDescription)
+            }
+        })
+
     }
 } // END OF CLASS
 
