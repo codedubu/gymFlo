@@ -178,7 +178,7 @@ final class SpotifyRemoteViewModel: NSObject, ObservableObject {
     }
     
     
-    // MARK: - UI Changes
+    // MARK: - Updates
     func update(playerState: SPTAppRemotePlayerState) {
         if lastPlayerState?.track.uri != playerState.track.uri { fetchArtwork(for: playerState.track) }
         lastPlayerState = playerState
@@ -202,7 +202,7 @@ final class SpotifyRemoteViewModel: NSObject, ObservableObject {
         }
     }
     
-    // MARK: - didTaps
+    // MARK: - Actions
     func didTapPauseOrPlay() {
         if let lastPlayerState = lastPlayerState, lastPlayerState.isPaused {
             appRemote.playerAPI?.resume(nil)
@@ -227,7 +227,7 @@ final class SpotifyRemoteViewModel: NSObject, ObservableObject {
     
     
     func didTapNext() {
-        appRemote.playerAPI?.skip(toNext: { thang, error in
+        appRemote.playerAPI?.skip(toNext: { _, error in
             if let error = error {
                 print("Error getting next song to update with player state:" + error.localizedDescription)
             }
@@ -235,12 +235,11 @@ final class SpotifyRemoteViewModel: NSObject, ObservableObject {
     }
     
     func didTapPrevious() {
-        appRemote.playerAPI?.skip(toPrevious: { thang, error in
+        appRemote.playerAPI?.skip(toPrevious: { _, error in
             if let error = error {
                 print("Error getting previous song to update with player state:" + error.localizedDescription)
             }
         })
-
     }
 } // END OF CLASS
 
@@ -293,6 +292,7 @@ extension SpotifyRemoteViewModel: SPTSessionManagerDelegate {
             }
         }
     }
+    
     
     func sessionManager(manager: SPTSessionManager, didRenew session: SPTSession) {
         alertItem = AlertContext.sessionRenewed
