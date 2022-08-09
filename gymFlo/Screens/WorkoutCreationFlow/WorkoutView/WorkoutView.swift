@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct WorkoutView: View {
+    
+    // routine landing pad
+    // programcontroller.programs[0].routines[0].workouts ???? 
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("hello")
+        // List
+        // ForEach routine.workouts { workout in
+        // Text(workout.name)
+//        Text("\(workout.sets)")
+//        Text("\(workout.reps)")
+//        Text("\(workout.weight)")
     }
 }
 
