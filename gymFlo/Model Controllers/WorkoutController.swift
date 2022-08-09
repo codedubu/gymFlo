@@ -9,7 +9,7 @@ import Foundation
 
 final class WorkoutController {
     
-    // Workouts
+    // MARK: - Workouts
     static func createWorkout(name: String, sets: Int, reps: Int, weight: Int, routine: Routine) {
         let newWorkout = Workout(name: name, sets: sets, reps: reps, weight: weight)
         RoutineController.addWorkoutTo(routine: routine, workout: newWorkout)

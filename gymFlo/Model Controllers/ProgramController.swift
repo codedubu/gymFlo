@@ -7,30 +7,31 @@
 
 import Foundation
 
-final class ProgramController {
+final class ProgramController: ObservableObject {
     
     // MARK: - Shared Instance
     static let shared = ProgramController()
 
     // MARK: - Source of Truth
-    var programs: [Program] = []
+    @Published var programs: [Program] = []
     
-    // MARK: - CRUD Methods
-    // Programs
+    init() {
+        loadFromPersistenceStore()
+    }
+    
+    // MARK: - Programs
     func createProgramWith(newName: String) {
         let newProgram = Program(name: newName)
         programs.append(newProgram)
-    }
-    
-    
-    func delete(programToDelete: Program) {
-        guard let index = programs.firstIndex(of: programToDelete) else { return }
-        programs.remove(at: index)
         saveToPersistenceStore()
     }
     
+    func deleteProgram(at indexSet: IndexSet) {
+        programs.remove(atOffsets: indexSet)
+        saveToPersistenceStore()
+    }
     
-    // Routines
+    // MARK: - Routines
     func addRoutineTo(program: Program, routine: Routine) {
         program.routines.append(routine)
         saveToPersistenceStore()
@@ -43,6 +44,7 @@ final class ProgramController {
         saveToPersistenceStore()
     }
     
+    
     // MARK: - Data Persistence
     func fileURL() -> URL {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -50,11 +52,11 @@ final class ProgramController {
         return fileURL
     }
     
-    
     func saveToPersistenceStore() {
         do {
             let data = try JSONEncoder().encode(programs)
             try data.write(to: fileURL())
+            print("File saved to\(data)")
         } catch {
             print(error)
             print("There was an error encoding \(error.localizedDescription)")

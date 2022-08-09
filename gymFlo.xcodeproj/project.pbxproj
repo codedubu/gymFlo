@@ -24,6 +24,9 @@
 		79AC83AB289C93F200A0F8A4 /* ProgramController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC83AA289C93F200A0F8A4 /* ProgramController.swift */; };
 		79AC83AD289C980200A0F8A4 /* RoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC83AC289C980200A0F8A4 /* RoutineController.swift */; };
 		79AC83AF289C9AEC00A0F8A4 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC83AE289C9AEC00A0F8A4 /* WorkoutController.swift */; };
+		79AC83B2289C9F0200A0F8A4 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC83B1289C9F0200A0F8A4 /* ProgramView.swift */; };
+		79AC83B4289CA05000A0F8A4 /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC83B3289CA05000A0F8A4 /* RoutineView.swift */; };
+		79AC83B6289CA06000A0F8A4 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC83B5289CA06000A0F8A4 /* WorkoutView.swift */; };
 		79C126B52890F680006CEC6E /* gymFloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C126B42890F680006CEC6E /* gymFloApp.swift */; };
 		79C126B92890F681006CEC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C126B82890F681006CEC6E /* Assets.xcassets */; };
 		79C126BC2890F681006CEC6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C126BB2890F681006CEC6E /* Preview Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		79AC83AA289C93F200A0F8A4 /* ProgramController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramController.swift; sourceTree = "<group>"; };
 		79AC83AC289C980200A0F8A4 /* RoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineController.swift; sourceTree = "<group>"; };
 		79AC83AE289C9AEC00A0F8A4 /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
+		79AC83B1289C9F0200A0F8A4 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
+		79AC83B3289CA05000A0F8A4 /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
+		79AC83B5289CA06000A0F8A4 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		79C126B12890F680006CEC6E /* gymFlo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gymFlo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C126B42890F680006CEC6E /* gymFloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gymFloApp.swift; sourceTree = "<group>"; };
 		79C126B82890F681006CEC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				79811FE42890FD13007D972D /* GYFTabBar.swift */,
+				79AC83B0289C9EDF00A0F8A4 /* WorkoutCreationFlow */,
 				79811FD72890FB63007D972D /* FocusView */,
 				79811FDA2890FB88007D972D /* TimerView */,
 				79811FD82890FB6B007D972D /* RemoteView */,
@@ -163,6 +170,16 @@
 			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
+		79AC83B0289C9EDF00A0F8A4 /* WorkoutCreationFlow */ = {
+			isa = PBXGroup;
+			children = (
+				79AC83B1289C9F0200A0F8A4 /* ProgramView.swift */,
+				79AC83B3289CA05000A0F8A4 /* RoutineView.swift */,
+				79AC83B5289CA06000A0F8A4 /* WorkoutView.swift */,
+			);
+			path = WorkoutCreationFlow;
+			sourceTree = "<group>";
+		};
 		79C126A82890F680006CEC6E = {
 			isa = PBXGroup;
 			children = (
@@ -182,8 +199,8 @@
 		79C126B32890F680006CEC6E /* gymFlo */ = {
 			isa = PBXGroup;
 			children = (
-				79AC83A9289C93DC00A0F8A4 /* Model Controllers */,
 				79AC83A4289C914900A0F8A4 /* Models */,
+				79AC83A9289C93DC00A0F8A4 /* Model Controllers */,
 				79811FD62890FB5E007D972D /* Screens */,
 				79C126CE2890FA51006CEC6E /* Helpers and Extensions */,
 				79C126C22890F68A006CEC6E /* Resources */,
@@ -328,6 +345,7 @@
 				79AC83AD289C980200A0F8A4 /* RoutineController.swift in Sources */,
 				79AC83A3289C914400A0F8A4 /* Program.swift in Sources */,
 				79811FDE2890FBB1007D972D /* SpotifyRemoteView.swift in Sources */,
+				79AC83B2289C9F0200A0F8A4 /* ProgramView.swift in Sources */,
 				797F805E28998B0F003EF576 /* Alert.swift in Sources */,
 				79AC83AF289C9AEC00A0F8A4 /* WorkoutController.swift in Sources */,
 				79811FE72890FDD1007D972D /* TimerViewModel.swift in Sources */,
@@ -337,7 +355,9 @@
 				79811FE02890FC0C007D972D /* FocusView.swift in Sources */,
 				79811FE52890FD13007D972D /* GYFTabBar.swift in Sources */,
 				79AC83AB289C93F200A0F8A4 /* ProgramController.swift in Sources */,
+				79AC83B6289CA06000A0F8A4 /* WorkoutView.swift in Sources */,
 				79AC83A6289C916100A0F8A4 /* Routine.swift in Sources */,
+				79AC83B4289CA05000A0F8A4 /* RoutineView.swift in Sources */,
 				79AC83A8289C916A00A0F8A4 /* Workout.swift in Sources */,
 				79C126D928910267006CEC6E /* Color+Ext.swift in Sources */,
 			);

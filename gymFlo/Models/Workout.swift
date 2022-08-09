@@ -7,11 +7,11 @@
 
 import Foundation
 
-final class Workout: Codable {
+final class Workout: Codable, Identifiable { // Bench Press 3 sets and 5 reps at 1000lbs
     var name: String
     var sets: Int
     var reps: Int
-    var weight: Int
+    var weight: Int? = nil
     
     init(name: String, sets: Int, reps: Int, weight: Int) {
         self.name   = name

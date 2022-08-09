@@ -15,8 +15,8 @@ struct GYFTabBar: View {
         
         NavigationView {
             TabView(selection: $selectedTab) {
-                TimerView()
-                    .tabItem { Label("Timer", systemImage: "timer") }
+                ProgramView()
+                    .tabItem { Label("Program", systemImage: "timer") }
                     .tag(Tabs.timer)
                 
                 FocusView()
@@ -31,7 +31,7 @@ struct GYFTabBar: View {
                     .tabItem { Label("Settings", systemImage: "gear") }
                     .tag(Tabs.settings)
             }
-            .navigationTitle(selectedTab.title)
+//            .navigationTitle(selectedTab.title)
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class Routine: Codable {
+final class Routine: Codable, Identifiable { // A Day, B Day, Upper, Lower,
     var name: String
     var workouts: [Workout]
     

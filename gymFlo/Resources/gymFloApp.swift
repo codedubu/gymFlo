@@ -15,6 +15,7 @@ struct gymFloApp: App {
         WindowGroup {
             GYFTabBar()
                 .environmentObject(spotify)
+                .environmentObject(ProgramController.shared)
                 .onOpenURL { url in
                     spotify.handleOpenURL(url)
                 }
