@@ -13,6 +13,7 @@ final class RoutineController {
     static func createRoutineWith(name: String, program: Program) {
         let newRoutine = Routine(name: name)
         ProgramController.shared.addRoutineTo(program: program, routine: newRoutine)
+        ProgramController.shared.saveToPersistenceStore()
     }
     
     

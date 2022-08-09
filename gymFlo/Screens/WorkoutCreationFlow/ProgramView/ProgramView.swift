@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ProgramView: View {
     
+    @StateObject var viewModel = ProgramViewModel()
+    
     @EnvironmentObject var programController: ProgramController
+    
     @State private var programName: String = ""
     
     var body: some View {
@@ -22,7 +25,9 @@ struct ProgramView: View {
             
             List {
                 ForEach(programController.programs) { program in
-                    Text(program.name)
+                    NavigationLink(destination: RoutineView(routines: program.routines, isShowingRoutineView: $viewModel.isShowingRoutineView)) {
+                        Text(program.name)
+                    }
                 }
                 .onDelete(perform: programController.deleteProgram)
             }
